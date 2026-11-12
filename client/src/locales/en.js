@@ -7,6 +7,7 @@ export default {
     finance: 'Finance',
     restocking: 'Restocking',
     demandForecast: 'Demand Forecast',
+    reports: 'Reports',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
   },
@@ -260,6 +261,34 @@ export default {
     decreasing: 'decreasing'
   },
 
+  // Backlog
+  backlog: {
+    title: 'Backlog Management',
+    subtitle: 'Track and resolve inventory shortages',
+    loading: 'Loading backlog...',
+    loadFailed: 'Failed to load backlog: {message}',
+    stats: {
+      high: 'High Priority',
+      medium: 'Medium Priority',
+      low: 'Low Priority',
+      total: 'Total Backlog Items'
+    },
+    cardTitle: 'Backlog Items',
+    empty: 'No backlog items - all orders can be fulfilled!',
+    table: {
+      orderId: 'Order ID',
+      sku: 'SKU',
+      itemName: 'Item Name',
+      quantityNeeded: 'Quantity Needed',
+      quantityAvailable: 'Quantity Available',
+      shortage: 'Shortage',
+      daysDelayed: 'Days Delayed',
+      priority: 'Priority'
+    },
+    unitsShort: 'units short',
+    days: '{count} days'
+  },
+
   // Priority
   priority: {
     high: 'High',
@@ -353,6 +382,33 @@ export default {
     english: 'English',
     japanese: 'Japanese',
     selectLanguage: 'Select Language'
+  },
+
+  // Reports
+  reports: {
+    title: 'Performance Reports',
+    subtitle: 'View quarterly performance metrics and monthly trends',
+    loading: 'Loading reports...',
+    loadFailed: 'Failed to load reports: {message}',
+    noData: 'No data for the selected filters',
+    notAvailable: 'N/A',
+    quarterlyPerformance: 'Quarterly Performance',
+    monthlyRevenueTrend: 'Monthly Revenue Trend',
+    monthOverMonth: 'Month-over-Month Analysis',
+    quarterLabel: 'Q{quarter} {year}',
+    monthLabel: '{month} {year}',
+    quarter: 'Quarter',
+    month: 'Month',
+    totalOrders: 'Total Orders',
+    totalRevenue: 'Total Revenue',
+    avgOrderValue: 'Avg Order Value',
+    fulfillmentRate: 'Fulfillment Rate',
+    orders: 'Orders',
+    revenue: 'Revenue',
+    change: 'Change',
+    growthRate: 'Growth Rate',
+    avgMonthlyRevenue: 'Avg Monthly Revenue',
+    bestQuarter: 'Best Performing Quarter'
   },
 
   // Common

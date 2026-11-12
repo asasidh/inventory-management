@@ -295,9 +295,10 @@ onBeforeUnmount(() => {
 }
 
 .budget-value {
+  font-family: var(--font-display);
   font-size: 2.5rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text);
   letter-spacing: -0.025em;
   line-height: 1.1;
 }
@@ -305,31 +306,82 @@ onBeforeUnmount(() => {
 .budget-number {
   width: 140px;
   padding: 0.5rem 0.75rem;
-  border: 1px solid #cbd5e1;
+  border: 1px solid var(--border-strong);
   border-radius: 8px;
   font-size: 0.938rem;
-  color: #334155;
+  color: var(--text);
+  background: var(--surface-2);
+  font-family: inherit;
+}
+
+.budget-number:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: var(--focus-ring);
 }
 
 .budget-slider {
   width: 100%;
   margin-top: 1.25rem;
-  accent-color: #2563eb;
+  accent-color: var(--accent);
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--surface-3);
+}
+
+.budget-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--surface-3);
+}
+
+.budget-slider::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--surface-3);
+}
+
+.budget-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  margin-top: -6px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.budget-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.budget-slider:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
 }
 
 .slider-scale {
   display: flex;
   justify-content: space-between;
   font-size: 0.75rem;
-  color: #64748b;
+  color: var(--text-muted);
   margin-top: 0.25rem;
 }
 
 .hint {
   margin-top: 0.75rem;
   font-size: 0.813rem;
-  color: #64748b;
+  color: var(--text-muted);
 }
 
 /* Dim content while a refresh is pending so users know it is not final. */
@@ -343,6 +395,7 @@ onBeforeUnmount(() => {
 }
 
 .stats-grid .stat-value {
+  font-family: var(--font-display);
   font-size: 1.75rem;
 }
 
@@ -350,12 +403,12 @@ onBeforeUnmount(() => {
   margin-left: 0.5rem;
   font-size: 0.813rem;
   font-weight: 500;
-  color: #64748b;
+  color: var(--text-muted);
 }
 
 .place-order-btn {
-  background: #2563eb;
-  color: white;
+  background: var(--accent);
+  color: var(--on-accent);
   border: none;
   border-radius: 8px;
   padding: 0.625rem 1.25rem;
@@ -366,19 +419,19 @@ onBeforeUnmount(() => {
 }
 
 .place-order-btn:hover:not(:disabled) {
-  background: #1d4ed8;
+  background: var(--accent-hover);
 }
 
 .place-order-btn:disabled {
-  background: #cbd5e1;
-  color: #64748b;
+  background: var(--border-strong);
+  color: var(--text-muted);
   cursor: not-allowed;
 }
 
 .success-message {
-  background: #ecfdf5;
-  border: 1px solid #a7f3d0;
-  color: #065f46;
+  background: var(--success-soft);
+  border: 1px solid var(--success);
+  color: var(--success);
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 1.25rem;
@@ -387,14 +440,14 @@ onBeforeUnmount(() => {
 
 .success-link {
   margin-left: 0.5rem;
-  color: #1d4ed8;
+  color: var(--info);
   font-weight: 600;
 }
 
 .empty-state {
   text-align: center;
   padding: 2.5rem 1rem;
-  color: #64748b;
+  color: var(--text-muted);
   font-size: 0.938rem;
 }
 

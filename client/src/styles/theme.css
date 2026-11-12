@@ -1,0 +1,68 @@
+/*
+ * Design tokens: dark navy + orange theme.
+ *
+ * Every component should take colours from these variables rather than
+ * hard-coding hex values, so the palette can change in one place.
+ * Orange is the single brand accent; status colours (success/info/warning/
+ * danger) keep their usual meanings and are tuned to read on navy.
+ */
+:root {
+  color-scheme: dark;
+
+  /* Surfaces, darkest to lightest */
+  --nav-bg: #070e1d;
+  --bg: #0b1426;
+  --surface: #111d35;
+  --surface-2: #172641;
+  --surface-3: #1e3052;
+
+  /* Lines */
+  --border: #22355a;
+  --border-strong: #31497a;
+
+  /* Text */
+  --text: #e8eef9;
+  --text-muted: #9aaccb;
+  --text-subtle: #6d81a6;
+
+  /* Brand accent. Text on an orange fill must use --on-accent (navy):
+     white on this orange is below 3:1 contrast. */
+  --accent: #ff7a1a;
+  --accent-hover: #ff9142;
+  --accent-strong: #e8650a;
+  --accent-soft: rgba(255, 122, 26, 0.14);
+  --accent-border: rgba(255, 122, 26, 0.45);
+  --on-accent: #0b1426;
+
+  /* Status: solid colour for text/marks, soft for badge/alert backgrounds */
+  --success: #34d399;
+  --success-soft: rgba(52, 211, 153, 0.14);
+  --info: #60a5fa;
+  --info-soft: rgba(96, 165, 250, 0.14);
+  --warning: #fbbf24;
+  --warning-soft: rgba(251, 191, 36, 0.14);
+  --danger: #f87171;
+  --danger-soft: rgba(248, 113, 113, 0.14);
+
+  /* Chart series, in order of use. Series 1 is the brand orange. */
+  --chart-1: #ff7a1a;
+  --chart-2: #60a5fa;
+  --chart-3: #34d399;
+  --chart-4: #a78bfa;
+  --chart-5: #fbbf24;
+  --chart-track: #22355a;
+
+  /* Shape and depth */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 6px 20px rgba(0, 0, 0, 0.22);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.5);
+  --overlay: rgba(3, 7, 16, 0.72);
+  --focus-ring: 0 0 0 3px rgba(255, 122, 26, 0.35);
+
+  /* Type. Noto Sans JP covers Japanese, which the Latin fonts don't. */
+  --font-body: 'Manrope', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Space Grotesk', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;
+}
