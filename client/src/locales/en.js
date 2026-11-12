@@ -5,7 +5,9 @@ export default {
     inventory: 'Inventory',
     orders: 'Orders',
     finance: 'Finance',
+    restocking: 'Restocking',
     demandForecast: 'Demand Forecast',
+    reports: 'Reports',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
   },
@@ -104,6 +106,11 @@ export default {
   // Orders
   orders: {
     title: 'Orders',
+    submittedOrders: 'Submitted Orders',
+    leadTime: 'Lead Time',
+    submittedDate: 'Submitted',
+    unitCost: 'Unit Cost',
+    leadTimeDays: '{count} days',
     description: 'View and manage customer orders',
     allOrders: 'All Orders',
     totalOrders: 'Total Orders',
@@ -127,6 +134,43 @@ export default {
       expectedDelivery: 'Expected Delivery',
       actualDelivery: 'Actual Delivery'
     }
+  },
+
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Set a budget and get recommended reorder quantities based on forecasted demand',
+    budget: 'Budget',
+    budgetHint: 'Drag the slider or type an amount (up to the cost of fully restocking every forecast item)',
+    stats: {
+      budget: 'Budget',
+      recommendedTotal: 'Recommended Total',
+      remaining: 'Remaining Budget',
+      itemCount: 'Items to Order',
+      leadTime: 'Lead Time'
+    },
+    days: '{count} days',
+    recommendations: 'Recommended Items',
+    updating: 'Updating...',
+    table: {
+      sku: 'SKU',
+      itemName: 'Item Name',
+      trend: 'Trend',
+      forecastedDemand: 'Forecasted Demand',
+      recommendedQty: 'Recommended Qty',
+      unitCost: 'Unit Cost',
+      lineTotal: 'Line Total',
+      leadTime: 'Lead Time'
+    },
+    partial: 'Partial',
+    partialQty: '{qty} of {forecast}',
+    empty: 'This budget is too low to buy any recommended items. Increase the budget to see recommendations.',
+    placeOrder: 'Place Order',
+    placingOrder: 'Placing order...',
+    orderSuccess: 'Order {orderNumber} submitted. Expected delivery: {date}.',
+    viewOrders: 'View in Orders',
+    orderFailed: 'Failed to place order: {message}',
+    loadFailed: 'Failed to load recommendations: {message}'
   },
 
   // Finance/Spending
@@ -203,6 +247,7 @@ export default {
     delivered: 'Delivered',
     shipped: 'Shipped',
     processing: 'Processing',
+    submitted: 'Submitted',
     backordered: 'Backordered',
     inStock: 'In Stock',
     lowStock: 'Low Stock',
@@ -214,6 +259,34 @@ export default {
     increasing: 'increasing',
     stable: 'stable',
     decreasing: 'decreasing'
+  },
+
+  // Backlog
+  backlog: {
+    title: 'Backlog Management',
+    subtitle: 'Track and resolve inventory shortages',
+    loading: 'Loading backlog...',
+    loadFailed: 'Failed to load backlog: {message}',
+    stats: {
+      high: 'High Priority',
+      medium: 'Medium Priority',
+      low: 'Low Priority',
+      total: 'Total Backlog Items'
+    },
+    cardTitle: 'Backlog Items',
+    empty: 'No backlog items - all orders can be fulfilled!',
+    table: {
+      orderId: 'Order ID',
+      sku: 'SKU',
+      itemName: 'Item Name',
+      quantityNeeded: 'Quantity Needed',
+      quantityAvailable: 'Quantity Available',
+      shortage: 'Shortage',
+      daysDelayed: 'Days Delayed',
+      priority: 'Priority'
+    },
+    unitsShort: 'units short',
+    days: '{count} days'
   },
 
   // Priority
@@ -309,6 +382,33 @@ export default {
     english: 'English',
     japanese: 'Japanese',
     selectLanguage: 'Select Language'
+  },
+
+  // Reports
+  reports: {
+    title: 'Performance Reports',
+    subtitle: 'View quarterly performance metrics and monthly trends',
+    loading: 'Loading reports...',
+    loadFailed: 'Failed to load reports: {message}',
+    noData: 'No data for the selected filters',
+    notAvailable: 'N/A',
+    quarterlyPerformance: 'Quarterly Performance',
+    monthlyRevenueTrend: 'Monthly Revenue Trend',
+    monthOverMonth: 'Month-over-Month Analysis',
+    quarterLabel: 'Q{quarter} {year}',
+    monthLabel: '{month} {year}',
+    quarter: 'Quarter',
+    month: 'Month',
+    totalOrders: 'Total Orders',
+    totalRevenue: 'Total Revenue',
+    avgOrderValue: 'Avg Order Value',
+    fulfillmentRate: 'Fulfillment Rate',
+    orders: 'Orders',
+    revenue: 'Revenue',
+    change: 'Change',
+    growthRate: 'Growth Rate',
+    avgMonthlyRevenue: 'Avg Monthly Revenue',
+    bestQuarter: 'Best Performing Quarter'
   },
 
   // Common

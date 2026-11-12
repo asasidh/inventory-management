@@ -70,7 +70,12 @@ npm install && npm run dev
 - Styles: `client/src/App.vue`
 
 ## Design System
-- Colors: Slate/gray (#0f172a, #64748b, #e2e8f0)
-- Status: green/blue/yellow/red
-- Charts: Custom SVG, CSS Grid for layouts
+- Theme: dark navy surfaces with an orange accent. All colours, radii, shadows and fonts are CSS variables in `client/src/styles/theme.css`; use `var(--token)`, never hard-coded hex
+- Text on an orange fill uses `--on-accent` (navy), not white
+- Status: `--success` / `--info` / `--warning` / `--danger` (with `-soft` backgrounds)
+- Charts: Custom SVG, `--chart-1..5` series colours, CSS Grid for layouts
+- Fonts: Manrope (body), Space Grotesk (headings, numbers), JetBrains Mono (codes), Noto Sans JP fallback
 - No emojis in UI
+
+## Code Conventions
+- Always document non-obvious logic changes with comments

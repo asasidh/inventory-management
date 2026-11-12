@@ -5,7 +5,9 @@ export default {
     inventory: '在庫',
     orders: '注文',
     finance: '財務',
+    restocking: '補充発注',
     demandForecast: '需要予測',
+    reports: 'レポート',
     companyName: '触媒コンポーネンツ',
     subtitle: '在庫管理システム'
   },
@@ -104,6 +106,11 @@ export default {
   // Orders
   orders: {
     title: '注文',
+    submittedOrders: '送信済み発注',
+    leadTime: 'リードタイム',
+    submittedDate: '送信日',
+    unitCost: '単価',
+    leadTimeDays: '{count}日',
     description: '顧客注文の表示と管理',
     allOrders: 'すべての注文',
     totalOrders: '総注文数',
@@ -127,6 +134,43 @@ export default {
       expectedDelivery: '予定配達日',
       actualDelivery: '実際の配達日'
     }
+  },
+
+  // Restocking
+  restocking: {
+    title: '補充発注',
+    description: '予算を設定すると、需要予測に基づく推奨発注数量が表示されます',
+    budget: '予算',
+    budgetHint: 'スライダーを動かすか金額を入力してください（上限は予測対象品目をすべて補充する費用）',
+    stats: {
+      budget: '予算',
+      recommendedTotal: '推奨合計額',
+      remaining: '残り予算',
+      itemCount: '発注品目数',
+      leadTime: 'リードタイム'
+    },
+    days: '{count}日',
+    recommendations: '推奨品目',
+    updating: '更新中...',
+    table: {
+      sku: 'SKU',
+      itemName: '品名',
+      trend: 'トレンド',
+      forecastedDemand: '予測需要',
+      recommendedQty: '推奨数量',
+      unitCost: '単価',
+      lineTotal: '小計',
+      leadTime: 'リードタイム'
+    },
+    partial: '一部のみ',
+    partialQty: '{forecast}中{qty}',
+    empty: 'この予算では推奨品目を購入できません。予算を増やすと推奨内容が表示されます。',
+    placeOrder: '発注する',
+    placingOrder: '発注中...',
+    orderSuccess: '注文 {orderNumber} を送信しました。配達予定日: {date}',
+    viewOrders: '注文一覧で確認',
+    orderFailed: '発注に失敗しました: {message}',
+    loadFailed: '推奨内容の読み込みに失敗しました: {message}'
   },
 
   // Finance/Spending
@@ -203,6 +247,7 @@ export default {
     delivered: '配達済み',
     shipped: '出荷済み',
     processing: '処理中',
+    submitted: '送信済み',
     backordered: 'バックオーダー',
     inStock: '在庫あり',
     lowStock: '在庫僅少',
@@ -214,6 +259,34 @@ export default {
     increasing: '増加',
     stable: '安定',
     decreasing: '減少'
+  },
+
+  // バックログ
+  backlog: {
+    title: 'バックログ管理',
+    subtitle: '在庫不足を追跡し、解消します',
+    loading: 'バックログを読み込み中...',
+    loadFailed: 'バックログの読み込みに失敗しました: {message}',
+    stats: {
+      high: '優先度: 高',
+      medium: '優先度: 中',
+      low: '優先度: 低',
+      total: 'バックログ合計'
+    },
+    cardTitle: 'バックログ項目',
+    empty: 'バックログ項目なし - すべての注文を履行できます！',
+    table: {
+      orderId: '注文ID',
+      sku: 'SKU',
+      itemName: '品目名',
+      quantityNeeded: '必要数量',
+      quantityAvailable: '在庫数量',
+      shortage: '不足',
+      daysDelayed: '遅延日数',
+      priority: '優先度'
+    },
+    unitsShort: '単位不足',
+    days: '{count}日'
   },
 
   // Priority
@@ -311,6 +384,33 @@ export default {
     selectLanguage: '言語を選択'
   },
 
+  // Reports
+  reports: {
+    title: 'パフォーマンスレポート',
+    subtitle: '四半期ごとの業績指標と月次トレンドを表示します',
+    loading: 'レポートを読み込み中...',
+    loadFailed: 'レポートの読み込みに失敗しました: {message}',
+    noData: '選択したフィルターに該当するデータがありません',
+    notAvailable: '該当なし',
+    quarterlyPerformance: '四半期業績',
+    monthlyRevenueTrend: '月次売上トレンド',
+    monthOverMonth: '前月比分析',
+    quarterLabel: '{year}年 第{quarter}四半期',
+    monthLabel: '{year}年{month}',
+    quarter: '四半期',
+    month: '月',
+    totalOrders: '総注文数',
+    totalRevenue: '総売上',
+    avgOrderValue: '平均注文額',
+    fulfillmentRate: '出荷達成率',
+    orders: '注文数',
+    revenue: '売上',
+    change: '増減',
+    growthRate: '成長率',
+    avgMonthlyRevenue: '月平均売上',
+    bestQuarter: '最高業績の四半期'
+  },
+
   // Common
   common: {
     loading: '読み込み中...',
@@ -328,6 +428,14 @@ export default {
 
   // Product Names
   productNames: {
+    // Backlog and demand-forecast items (these SKUs are not in inventory.json)
+    'Industrial Widget Type A': '工業用ウィジェット タイプA',
+    'Steel Bearing Assembly': 'スチールベアリング組立',
+    'High-Temperature Gasket': '耐熱ガスケット',
+    'Electric Motor 5HP': '電動モーター 5HP',
+    'Oil Filter Cartridge': 'オイルフィルターカートリッジ',
+    'Pressure Relief Valve': '圧力逃し弁',
+    'Logic Controller Board': 'ロジックコントローラーボード',
     'Single Layer PCB Assembly': '単層PCB組立',
     'Dual Layer PCB Assembly': '二層PCB組立',
     'Multi Layer PCB Assembly': '多層PCB組立',
