@@ -5,6 +5,7 @@ export default {
     inventory: 'Inventory',
     orders: 'Orders',
     finance: 'Finance',
+    restocking: 'Restocking',
     demandForecast: 'Demand Forecast',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
@@ -104,6 +105,11 @@ export default {
   // Orders
   orders: {
     title: 'Orders',
+    submittedOrders: 'Submitted Orders',
+    leadTime: 'Lead Time',
+    submittedDate: 'Submitted',
+    unitCost: 'Unit Cost',
+    leadTimeDays: '{count} days',
     description: 'View and manage customer orders',
     allOrders: 'All Orders',
     totalOrders: 'Total Orders',
@@ -127,6 +133,43 @@ export default {
       expectedDelivery: 'Expected Delivery',
       actualDelivery: 'Actual Delivery'
     }
+  },
+
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Set a budget and get recommended reorder quantities based on forecasted demand',
+    budget: 'Budget',
+    budgetHint: 'Drag the slider or type an amount (up to the cost of fully restocking every forecast item)',
+    stats: {
+      budget: 'Budget',
+      recommendedTotal: 'Recommended Total',
+      remaining: 'Remaining Budget',
+      itemCount: 'Items to Order',
+      leadTime: 'Lead Time'
+    },
+    days: '{count} days',
+    recommendations: 'Recommended Items',
+    updating: 'Updating...',
+    table: {
+      sku: 'SKU',
+      itemName: 'Item Name',
+      trend: 'Trend',
+      forecastedDemand: 'Forecasted Demand',
+      recommendedQty: 'Recommended Qty',
+      unitCost: 'Unit Cost',
+      lineTotal: 'Line Total',
+      leadTime: 'Lead Time'
+    },
+    partial: 'Partial',
+    partialQty: '{qty} of {forecast}',
+    empty: 'This budget is too low to buy any recommended items. Increase the budget to see recommendations.',
+    placeOrder: 'Place Order',
+    placingOrder: 'Placing order...',
+    orderSuccess: 'Order {orderNumber} submitted. Expected delivery: {date}.',
+    viewOrders: 'View in Orders',
+    orderFailed: 'Failed to place order: {message}',
+    loadFailed: 'Failed to load recommendations: {message}'
   },
 
   // Finance/Spending
@@ -203,6 +246,7 @@ export default {
     delivered: 'Delivered',
     shipped: 'Shipped',
     processing: 'Processing',
+    submitted: 'Submitted',
     backordered: 'Backordered',
     inStock: 'In Stock',
     lowStock: 'Low Stock',
